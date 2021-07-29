@@ -30,7 +30,9 @@ protobuf_deps()
 
 
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_repositories")
-scala_repositories()
+scala_repositories(
+  maven_servers = ["https://repo.maven.apache.org/maven2/"]
+)
 register_toolchains("//:scala_toolchain")
 
 load("//3rdparty:workspace.bzl", "maven_dependencies")
