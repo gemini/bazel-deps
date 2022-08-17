@@ -11,6 +11,14 @@ git_repository(
 )
 
 http_archive(
+    name = "zlib",
+    build_file = "@com_google_protobuf//:third_party/zlib.BUILD",
+    sha256 = "629380c90a77b964d896ed37163f5c3a34f6e6d897311f1df2a7016355c45eff",
+    strip_prefix = "zlib-1.2.11",
+    urls = ["https://github.com/madler/zlib/archive/v1.2.11.tar.gz"],
+)
+
+http_archive(
     name = "com_google_protobuf",
     sha256 = "1e622ce4b84b88b6d2cdf1db38d1a634fe2392d74f0b7b74ff98f3a51838ee53",
     urls = ["https://github.com/protocolbuffers/protobuf/archive/v3.8.0.zip"],
